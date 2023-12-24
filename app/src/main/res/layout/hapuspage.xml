@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <!-- Baris 1 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#8BCA72"
+            android:padding="16dp">
+
+            <!-- Menu -->
+            <Button
+                android:id="@+id/menuButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/logo_menu"
+                android:contentDescription="Open Sidebar"
+                android:onClick="showPopupMenu" />
+
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo" />
+
+            <!-- Profile -->
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/logo_profile_user"
+                android:contentDescription="Open Sidebar"
+                android:onClick="showProfileContextMenu"/>
+        </RelativeLayout>
+
+        <!-- Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Spinner Kode Barang -->
+                <Spinner
+                    android:id="@+id/spinnerKodeBarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#FFFF"
+                    android:padding="10dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Spinner Jenis Barang -->
+                <Spinner
+                    android:id="@+id/spinnerJenisBarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:backgroundTint="#FFFF"
+                    android:padding="10dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Nama Barang (Ubah dari EditText menjadi TextView) -->
+                <TextView
+                    android:id="@+id/textViewNamaBarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Nama Barang" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <!-- Stok Barang (Ubah dari EditText menjadi TextView) -->
+                <TextView
+                    android:id="@+id/textViewStokBarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Stok Barang" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Button Hapus Barang -->
+            <Button
+                android:id="@+id/buttonHapusBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:onClick="handleHapusBarangClick"
+                android:text="Hapus Barang"
+                android:layout_gravity="center"
+                android:backgroundTint="#4CAF50" />
+
+
+        </LinearLayout>
+
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="180dp"
+            android:background="#8BCA72"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Button Exit -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:backgroundTint="#175500"
+                android:onClick="backHome"
+                android:text="Kembali"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

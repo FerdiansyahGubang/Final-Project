@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_logo"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/logo" />
+
+    <item
+        android:id="@+id/menu_app_name"
+        android:title="Monitoring Inventory"
+        android:enabled="false" />
+
+    <item
+        android:id="@+id/menu_info_barang"
+        android:title="Info Barang"
+        android:icon="@drawable/logo_box_info"
+        app:showAsAction="collapseActionView"
+        />
+
+    <item
+        android:id="@+id/menu_tambah_barang"
+        android:title="Tambah Barang"
+        android:icon="@drawable/logo_box_add"
+        />
+
+    <item
+        android:id="@+id/menu_edit_barang"
+        android:title="Edit Barang"
+        android:icon="@drawable/logo_box_edit"
+        />
+
+    <item
+        android:id="@+id/menu_hapus_barang"
+        android:title="Hapus Barang"
+        android:icon="@drawable/logo_box_delete"
+        />
+
+    <item
+        android:id="@+id/menu_riwayat"
+        android:title="Riwayat"
+        android:icon="@drawable/logo_box_history"
+        />
+
+</menu>
